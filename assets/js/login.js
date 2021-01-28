@@ -36,10 +36,7 @@ $(function () {
         $.ajax({
             type: 'post',
             url: '/api/reguser',
-            data: {
-                username: $('#form_reg [name=uname]').val(),
-                password: $('#form_reg [name=password]').val()
-            },
+            data: $(this).serialize(),
             success(res) {
                 if (res.status !== 0) {
                     return layer.msg(res.message)

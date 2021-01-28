@@ -1,0 +1,61 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: url(../images/login_bg.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.loginbox {
+    width: 400px;
+    height: 310px;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.login-box,
+.reg-box {
+    padding: 0 30px;
+}
+
+.titleBox {
+    height: 60px;
+    background: url(../images/login_title.png) no-repeat center;
+}
+
+/* 登陆界面 */
+
+
+/* 注册界面 */
+.reg-box {
+    display: none;
+}
+
+#login-box,
+#reg-box {
+    float: right;
+    font-size: 12px;
+}
+
+.item {
+    position: relative;
+}
+
+.item input {
+    padding-left: 35px;
+}
+
+i {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}

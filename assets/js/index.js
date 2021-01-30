@@ -1,4 +1,4 @@
-$(function () {
+
     // 调用获取用户信息函数
     getUserinfo();
     // 设置点击退出功能
@@ -29,13 +29,6 @@ $(function () {
 
 
 
-
-
-
-
-
-
-
     // 获取用户信息函数
     function getUserinfo() {
         $.ajax({
@@ -50,7 +43,7 @@ $(function () {
                     return layer.msg(res.message)
                 }
                 console.log(res);
-                renderAvatar(res)
+                renderAvatar(res.data)
             },
             error() {
                 console.log('发起请求失败');
@@ -70,21 +63,19 @@ $(function () {
     }
 
     // 渲染结构
-    function renderAvatar(res) {
-        var uname = res.data.nikename || res.data.username
-        if (res.data.user_pic == null) {
+    function renderAvatar(user) {
+        var uname = user.nickname || user.username;
+        $('#welcome').html('欢迎&nbsp;&nbsp;' + uname)
+        if (user.user_pic == null) {
             // 未设置照片时 隐藏照片
             $('.userinfo img').hide()
             // 替换span里面的文字 可直接用 str[0]方式,没必要用截取字符串
             // $('.userinfo .text-avatar').html(uname.substr(0, 1))
             $('.userinfo .text-avatar').html(uname[0].toUpperCase()).show()
-            $('.userinfo #welcome').html("欢迎&nbsp;&nbsp;&nbsp;" + uname)
         } else {
             // 设置照片时 修改图片的src 属性
             $('.userinfo .text-avatar').hide()
-            $('.userinfo img').prop('src', res.data.user_pic).show()
+            $('.userinfo img').prop('src', user.user_pic).show()
         }
     }
 
-
-})

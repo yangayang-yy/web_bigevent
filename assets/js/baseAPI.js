@@ -2,6 +2,7 @@
 // 会先调用 ajaxPrefilter 这个函数
 // 在这个函数中，可以拿到我们给Ajax提供的配置对象
 $.ajaxPrefilter(function (options) {
+    //  options.url = 'http://www.liulongbin.top:3007' + options.url
     options.url = 'http://ajax.frontend.itheima.net' + options.url
     // 为有权限 的接口加 headers
     if (options.url.includes('/my/')) {//options.url.indexof('/my/')!==-1 

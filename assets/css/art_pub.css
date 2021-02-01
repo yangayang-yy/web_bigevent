@@ -1,0 +1,50 @@
+body {
+    padding: 20px;
+    background-color: #eee;
+}
+
+.layui-card {
+    padding-bottom: 40px;
+}
+
+
+/* 设置裁剪区域的样式 */
+.cropper-box {
+    width: 400px;
+    height: 280px;
+    background-color: cyan;
+    overflow: hidden;
+}
+
+.w200 {
+    width: 220px;
+    height: 150px;
+    margin-top: 50px;
+}
+
+/* 设置图片行的样式 */
+.row1 {
+    display: flex;
+}
+
+/* 设置 preview-box 区域的的样式 */
+.preview-box {
+    display: flex;
+    flex-direction: column;
+    flex: .5;
+    align-items: center;
+}
+
+/* 设置 img-preview 区域的样式 */
+.img-preview {
+    overflow: hidden;
+    /* border-radius: 50%; */
+}
+
+.layui-btn-danger {
+    margin-top: 20px;
+}
+
+#up_pic {
+    display: none;
+}

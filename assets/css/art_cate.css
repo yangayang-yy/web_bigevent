@@ -1,0 +1,13 @@
+body{
+    padding: 20px;
+    background-color: #eee;
+}
+
+#add{
+    float: right;
+    margin-top: 7px;
+}
+.layui-form{
+    margin-top: 20px;
+    margin-right: 20px;
+}
